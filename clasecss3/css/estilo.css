@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header, section, footer, aside, nav, article, figure, figcaption,  hgroup{
+    display: block;
+} 
+
+a, a:hover, a:visited, a:link {
+    text-decoration:none;
+    color: gray;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+body {
+    background: url(../images/fondo4.jpg) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+article {
+    padding: 15px;
+}
+
+article header {
+    margin-bottom: 15px;
+}
+
+time {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: dimgray;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+nav .nav-item.active {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-item:hover {
+    background-color: #b8daff !important;
+    color: #004085;
+}
+
+footer p {
+    padding-top: 30px
+} 
+
+div.container > footer {
+    height: 200px;
+    padding-top: 45px;
+    clear: both;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.figure-img {
+    margin-bottom: 4px;
+}
+
+.figure-caption {
+    font-size: 90%;
+    color: #6c757d;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.list-group {
+    list-style: none;
+}
+
+.list-group-item {
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item a {
+    padding: 0.75rem 1.25rem;
+    display: block;
+}
+
+.list-group-item a:hover {
+    color: #fff;
+    background-color: #b8daff;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.list-group-item-primary a {
+    color: #004085;
+    background-color: #b8daff;
+}
+
+.pt-5 {
+    padding-top: 50px;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.col-45 {
+    width: 45%;
+    margin: 0;
+    float: left;
+}
+
+.col-70 {
+    width: 70%;
+    margin: 0;
+    float: left;
+}
+
+.col-30 {
+    width: 30%;
+    margin: 0;
+    float: left;
+}
+
+.card {
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    margin: 8px;
+    padding: 20px 10px;
+    background: white;
+    opacity: 0.8;
+}
+
+.card:hover {
+    opacity: 1.0;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .8);
+}

@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a, a:hover, a:visited {
+    font-style: none;
+}
+
+header, section, footer, aside, nav, article, figure, figcaption,  hgroup{
+    display: block;
+} 
+
+body {
+    background: url(../images/fondo4.jpg) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+.card {
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.1);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    margin: 8px;
+    padding: 20px 10px;
+    background: white;
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    min-height: 610px;
+}
+
+.card:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .8);
+}
+
+article {
+    padding: 15px;
+}
+
+article header {
+    margin-bottom: 15px;
+}
+
+div.container > footer {
+    height: 200px;
+    padding-top: 45px;
+}
+
+footer p {
+    padding-top: 30px
+} 
+
+time {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: dimgray;
+}

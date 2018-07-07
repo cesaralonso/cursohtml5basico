@@ -1,0 +1,259 @@
+* {
+    margin: 0px;
+    padding: 0px;
+} 
+
+header, section, footer, aside, nav, article, figure, figcaption,  hgroup{
+    display: block;
+} 
+
+@font-face {
+
+    /*www.moorstation.org/typoasis/designers/steffmann/*/
+
+    font-family: 'MiNuevaFuente';
+    src: url('font.ttf');
+} 
+
+
+h1 {
+    font: bold 20px verdana, sans-serif;
+    text-shadow: rgb(133,133,250) 3px 3px 5px;
+    
+    /* ease, linear, ease-in, ease-out o ease-in-out */
+    -moz-transition: -moz-transform 1s ease-in-out 0.2s;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0.2s;
+}
+
+h1:hover{
+    /*
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    */
+
+    -moz-transform: translateX(250px);
+    -webkit-transform: translateX(250px);
+} 
+
+h2 {
+    font: bold 14px verdana, sans-serif;
+} 
+
+body {
+    height: 100vh;
+    text-align: center;
+    background: #DDDDDD;
+    
+    /*
+    background: -webkit-linear-gradient(top, #FFFFFF, #006699);
+    background: -moz-linear-gradient(top, #FFFFFF, #006699);
+    */
+
+    background: -webkit-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+    background: -moz-radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);
+} 
+
+#agrupar {
+    width: 960px;
+    margin: 45px auto;
+    text-align: left;
+    border: 1px solid #000000;
+    -moz-border-radius: 20px 10px 30px 50px;   
+    -webkit-border-radius: 20px 10px 30px 50px;   
+    border-radius: 20px 10px 30px 50px;
+    background: #fff; 
+
+    -moz-box-shadow: rgba(150,150,150,0.7) 5px 5px 10px;
+    -webkit-box-shadow: rgba(150,150,150,0.7) 5px 5px 10px;
+    box-shadow: rgba(150,150,150,0.7) 5px 5px 10px;
+
+    /*
+    www.minkbooks.com/ content/diamonds.png
+
+    border: 29px;
+    -moz-border-image: url("diamonds.png") 29 stretch;
+    -webkit-border-image: url("diamonds.png") 29 stretch;
+    border-image: url("diamonds.png") 29 stretch; 
+    */
+
+    /*
+    -moz-transform: scale(1,-1);
+    -webkit-transform: scale(1,-1);
+
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+
+    -moz-transform: skew(20deg);
+    -webkit-transform: skew(20deg); 
+    
+   -moz-transform: translate(100px);
+   -webkit-transform: translate(100px); 
+
+    -moz-transform: translateY(100px) rotate(45deg) scaleX(0.3);
+    -webkit-transform: translateY(100px) rotate(45deg) scaleX(0.3);
+    */
+} 
+
+#cabecera {
+    background: #FFFBB9;
+    padding: 20px;
+    -moz-border-radius: 20px 10px 0px 0px;   
+    -webkit-border-radius: 20px 10px 0px 0px;   
+    border-radius: 20px 10px 0px 0px;
+} 
+ 
+#menu {
+    background: #CCCCCC;
+    padding: 5px 15px;
+} 
+
+#menu li {
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    font: bold 14px verdana, sans-serif;
+}
+
+#seccion {
+    float: left;
+    width: 660px;
+    margin: 20px;
+} 
+
+#columna {
+    float: left;
+    width: 220px;
+    margin: 20px 0px;
+    padding: 20px;
+    background: #CCCCCC;
+} 
+ 
+#pie {
+    clear: both; text-align: center;
+    padding: 20px;
+    border-top: 2px solid #999999;
+} 
+
+article {
+    background: #FFFBCC;
+    border: 1px solid #999999;
+    padding: 20px;
+    margin-bottom: 15px;
+
+    -moz-border-radius: 20px 10px 30px 50px;   
+    -webkit-border-radius: 20px 10px 30px 50px;   
+    border-radius: 20px 10px 30px 50px;
+
+    -moz-box-shadow: rgb(150,150,150) 2px 2px;
+    -webkit-box-shadow: rgb(150,150,150) 2px 2px;
+    box-shadow: rgb(150,150,150) 2px 2px;
+} 
+
+article footer {
+    text-align: right;
+} 
+
+time {
+    color: #999999;
+} 
+
+figcaption {
+    font: italic 14px verdana, sans-serif;
+}
+
+
+
+
+
+/*
+
+ border-radius Esta propiedad genera esquinas redondeadas para la caja formada por el elemento. 
+ 
+    Posee dos parámetros diferentes que dan forma a la esquina. 
+    
+    El primer parámetro determina la curvatura horizontal y el segundo la vertical, otorgando la posibilidad de crear una elipsis. 
+    
+    Para declarar ambos parámetros de la curva, los valores deben ser separados por una barra (por ejemplo, border-radius: 15px / 20px). 
+    
+    Usando solo un valor determinaremos la misma forma para todas las esquinas (por ejemplo, border-radius: 20px). 
+    
+    Un valor para cada esquina puede ser declarado en un orden que sigue las agujas del reloj, comenzando por la esquina superior izquierda. 
+ 
+
+ box-shadow Esta propiedad crea sombras para la caja formada por el elemento. 
+ 
+    Puede tomar cinco parámetros: el color, el desplazamiento horizontal, el desplazamiento vertical, el valor de difuminación, y la palabra clave inset para generar una sombra interna. 
+    
+    Los desplazamientos pueden ser negativos, y el valor de difuminación y el valor inset son opcionales (por ejemplo, box-shadow: #000000 5px 5px 10px inset). 
+    
+
+text-shadow Esta propiedad es similar a box-shadow pero específica para textos. 
+    
+    Toma cuatro parámetros: el color, el desplazamiento horizontal, el desplazamiento vertical, y el valor de difuminación (por ejemplo, text-shadow: #000000 5px 5px 10px). 
+ 
+
+@font-face Esta regla nos permite cargar y usar cualquier fuente que necesitemos. 
+ 
+    Primero, debemos declarar la fuente, proveer un nombre con la propiedad fontfamily y especificar el archivo con src (por ejemplo, @font-face{ font-family: 
+
+    Mifuente; src: url('font.ttf') }). 
+
+    Luego de esto, podremos asignar la fuente (en el ejemplo Mifuente) a cualquier elemento del documento. 
+
+
+linear-gradient(posición inicio, color inicial, color final) Esta función puede ser aplicada a las propiedades background o background-image para generar un gradiente lineal. 
+
+    Los atributos indican el punto inicial y los colores usados para crear el gradiente. 
+
+    El primer valor puede ser especificado en pixeles, en porcentaje o usando las palabras clave top, bottom, left y right. 
+
+    El punto de inicio puede ser reemplazado por un ángulo para proveer una dirección específica para el gradiente (por ejemplo, lineargradient(top, #FFFFFF 50%, #006699 90%);). 
+
+
+radial-gradient(posición inicio, forma, color inicial, color final) Esta función puede ser aplicada a las propiedades background o background-image para generar un gradiente radial. 
+
+   La posición de inicio es el origen y puede ser declarado en pixeles, porcentaje o como una combinación de las palabras clave center, top, bottom, left y right. 
+
+   Existen dos valores para la forma: circle y ellipse, y puntos de terminación pueden ser declarados para cada color indicando la posición donde la transición comienza (por ejemplo, radial-gradient(center, circle, #FFFFFF 0%, #006699 200%);). 
+
+
+rgba() Esta función es una mejora de rgb(). 
+
+   Toma cuatro valores: el color rojo (0-255), el color verde (0-255), el color azul (0-255), y la opacidad (un valor entre 0 y 1). 
+
+
+hsla() Esta función es una mejora de hsl(). 
+
+   Puede tomar cuatro valores: el tono (un valor entre 0 y 360), la saturación (un porcentaje), la luminosidad (un porcentaje), y la opacidad (un valor entre 0 y 1). 
+
+
+outline Esta propiedad fue mejorada con la incorporación de otra propiedad llamada outline-offset. 
+
+   Ambas propiedades combinadas generan un segundo borde alejado del borde original del elemento (por ejemplo, outline: 1px solid #000000; outline-offset: 10px;). 
+
+
+border-image Esta propiedad crea un borde con una imagen personalizada. 
+
+  Necesita que el borde sea declarado previamente con las propiedades border o border-with, y toma al menos tres parámetros: la URL de la imagen, el tamaño de las piezas que serán tomadas de la imagen para construir el borde, y una palabra clave que especifica cómo esas piezas serán ubicadas alrededor del elemento (por ejemplo, border-image: url("file.png") 15 stretch;). 
+
+
+transform Esta propiedad modifica la forma de un elemento. 
+
+    Utiliza cuatro funciones básicas: scale (escalar), rotate (rotar), skew (inclinar), y translate (trasladar o mover). 
+
+    La función scale recibe solo un parámetro. 
+
+        Un valor negativo invierte el elemento, valores entre 0 y 1 reducen el elemento y valores mayores que 1 expanden el elemento (por ejemplo, transform: scale(1.5);). 
+
+    La función rotate usa solo un parámetro expresado en grados para rotar el elemento (por ejemplo, transform: rotate(20deg);). 
+
+    La función skew recibe dos valores, también en grados, para la transformación horizontal y vertical (por ejemplo, transform: skew(20deg, 20deg);). 
+
+    La función translate mueve el objeto tantos pixeles como sean especificados por sus parámetros (por ejemplo, transform: translate(20px);). 
+
+
+transition Esta propiedad puede ser aplicada para crear una transición entre dos estados de un elemento. 
+
+   Recibe hasta cuatro parámetros: la propiedad afectada, el tiempo que le tomará a la transición desde el comienzo hasta el final, una palabra clave para especificar cómo la transición será realizada (ease, linear, ease-in, ease-out, ease-in-out) y un valor de retardo que determina el tiempo que la transición tardará en comenzar (por ejemplo, transition: color 2s linear 1s;)
+
+*/
