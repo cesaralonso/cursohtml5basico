@@ -1,0 +1,756 @@
+
+https://github.com/cesaralonso/cursohtml5basico
+
+
+###################
+Primera Clase HTML5.
+
+
+Que vamos a lograr en este curso.
+
+Front end y Back end.
+
+De que se compone y su participación en Html5: Html5, Css3 y Javascript.
+
+Modelo MVC.
+
+XAMPP
+
+Html5
+
+Estructura básica (elementos block e inline).
+
+Diseño clasico.
+
+Dentro del Body, lo que necesitan intenpretar los navegadores.
+
+Nuevas etiquetas.
+
+APIs integradas (interfaz de programación de aplicaciones).
+
+Que verémos en la siguiente clase.
+
+
+
+
+
+
+
+####################
+
+Segunda Clase CSS3, PARTE 1
+
+
+---------------
+Repaso de HTML5
+
+
+------------
+¿Que es CSS?
+
+El CSS (hojas de estilo en cascada) es un lenguaje que define la apariencia de un documento escrito en un lenguaje de marcado (por ejemplo, HTML).
+CSS sobreescribe estilos que proporcionan los navegadores a las páginas web.
+
+
+https://www.w3schools.com/Css/default.asp
+
+CSS is a language that describes the style of an HTML document.
+CSS describes how HTML elements should be displayed.
+
+
+---------------------------------
+Elementos Block - Elementos Inline
+
+
+
+------------------------------
+Modelos de Cajas (tradicional)
+
+Los navegadores consideran cada elemento HTML como una caja. 
+Una página web es en realidad un grupo de cajas ordenadas siguiendo ciertas reglas. 
+Estas reglas son establecidas por estilos provistos por los navegadores o por los diseñadores usando CSS.
+
+Todo elemento estructural es considerado una caja y la estructura completa es presentada como un grupo de cajas. 
+Las cajas agrupadas constituyen lo que es llamado un Modelo de Caja.
+
+
+
+# 2 formas de dimensionar cajas
+
+CONTENT-BOX
+width solo para el contenido, + padding + border
+
+BORDER-BOX
+width total contando contenido + padding + border
+
+
+box-sizing: content-box o border-box
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+Reglas básicas que nos ayudarán a proveer consistencia al diseño (sobreescribir estilos default de navegadores):
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+Asegurar que navegadores que no soporten HTML5 tomen nuevos elementos como cajas:
+
+header, section, footer, aside, nav, article, figure, figcaption,  hgroup{
+    display: block;
+}
+
+
+Eliminar el subrayado default a los enlaces:
+
+a, a:hover, a:visited, a:link {
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+-------
+Estilos
+
+Estilos en línea
+
+<p style="font-size: 20px;">
+
+
+Estilos embebidos
+
+<style>     
+p { 
+	font-size: 20px;
+}   
+</style>
+
+Archivos externos
+
+<link rel="stylesheet" href="misestilo.css">
+
+
+-----------
+Referencias
+
+Referenciando con palabra clave 
+
+p { 
+	font-size: 20px;
+}   
+
+
+Referenciando con el atributo id 
+
+#texto { 
+	font-size: 20px;
+}   
+
+
+Referenciando con el atributo class
+
+.texto { 
+	font-size: 20px;
+} 
+
+p.texto1 { 
+	font-size: 20px;
+} 
+
+
+Referenciando con cualquier atributo
+
+p[name="texto1"] { 
+	font-size: 20px;
+} 
+
+
+-------
+Nuevos selectores
+
+div > p.texto2{   
+	color: #990000; 
+}
+
+Selector > La regla en el Listado modifica los elementos <p> que son hijos de un elemento <div>. 
+
+
+
+p.texto2 + p{   
+	color: #990000; 
+}
+ 
+Selector + La regla del Listado afecta al elemento <p> que se encuentra ubicado luego de otro elemento <p> identificado con el valor texto2 en su atributo class.
+
+
+
+p.texto2 ~ p{   
+	color: #990000; 
+}
+
+Selector ~ Este selector es similar al anterior, pero en este caso el elemento de la derecha no tiene que estar ubicado inmediatamente después del de la izquierda. 
+
+
+
+-------------
+Pseudo Clases
+
+	hover
+
+	link
+	
+	visited
+
+	first-child
+
+	last-child
+
+
+
+------------------
+Importar Fuentes
+	@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+---------------------
+Consola de desarrollador - Presionar F12 En cualquier navegador.
+
+
+
+
+----------
+Ejercicio:
+
+Construir el CSS requerido para el archivo index.html.
+
+
+
+
+####################
+clase 3, CSS3 PARTE 2:
+
+
+CSS3
+
+BOX-SIZING: BORDER-BOX
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_box-sizing
+
+TAMAÑOS DE PANTALLAS COMO LO HACE BOOTSTRAP
+https://v4-alpha.getbootstrap.com/layout/responsive-utilities/
+
+CREAR DISEÑO RESPONSIVO
+responsividad.html
+columnasresponsivo.html
+dropdown.html
+galeriaresponsiva.html
+
+
+
+
+
+
+=================
+BOOTSTRAP 4
+Framework
+
+Historia
+
+Por que usar Bootstrap?
+	Mobile first styles.
+	Browser suport.
+	Fácil de comenzar.
+	Responsive design.
+
+Que incluye?
+	Estructura, Grid System.
+	CSS.
+	Componentes.
+	Javascript Plugins.
+	Customizable.
+
+Instalación
+	getbootstrap.com
+
+	meta viewport width=device-width, initial-scale=1
+
+
+------------
+Mobile First
+
+
+MOBILE FIRST STRATEGY
+? Content
+	o Determine what is most important.
+? Layout
+	o Design to smaller widths first.
+	o Base CSS address mobile device first;media queries address for tablet,desktops.
+? Progressive Enhancement
+	o Add elements as screen size increases
+
+
+-----------
+Grid System
+
+Grid systems are used for creating page layouts through a series of rows and columns that house your content.
+
+? Rows must be placed within a .container class for proper alignment and padding.
+? Use rows to create horizontal groups of columns.
+? Content should be placed within columns, and only columns may be immediate children of rows.
+? Predefined grid classes like .row and .col-xs-4 are available for quickly making grid layouts. 
+? Grid columns are created by specifying the number of twelve available columns you wish to span. For
+example, three equal columns would use three .col-xs-4.
+
+
+<div class="container">
+ <div class="row">
+ <div class="col-*-*"></div>
+ <div class="col-*-*"></div>
+ </div>
+ <div class="row">...</div>
+</div>
+<div class="container">....
+
+
+------
+Tables
+
+	table-striped 
+	table-bordered
+	table-hover 
+	table-condensed 
+	table-responsive
+
+
+------------------
+Contextual classes
+	active
+	success
+	warning
+	danger
+	info
+	default
+
+
+-----
+Forms
+
+
+Inline Forms
+
+Horizontal Forms
+
+<form class="form-horizontal" role="form">
+ <div class="form-group">
+ 	<label for="firstname" class="col-sm-2 control-label">First Name</label>
+ 	<div class="col-sm-10">
+ 		<input type="text" class="form-control" id="firstname" placeholder="Enter First Name">
+ 	</div>
+ </div>
+ <div class="form-group">
+ 	<label for="lastname" class="col-sm-2 control-label">Last Name</label>
+ 	<div class="col-sm-10">
+ 		<input type="text" class="form-control" id="lastname" placeholder="Enter Last Name">
+ 	</div>
+ </div>
+ <div class="form-group">
+ 	<div class="col-sm-offset-2 col-sm-10">
+ 		<div class="checkbox">
+ 			<label>
+ 				<input type="checkbox"> Remember me
+ 			</label>
+ 		</div>
+ 	</div>
+ </div>
+ <div class="form-group">
+ 	<div class="col-sm-offset-2 col-sm-10">
+ 		<button type="submit" class="btn btn-default">Sign in</button>
+ 	</div>
+ </div>
+</form>
+
+
+-------
+Buttons
+
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default Button</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary Button</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success Button</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info Button</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning Button</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger Button</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link Button</button>
+
+
+Button Size
+
+Class 		Description
+.btn-lg 	This makes button size large.
+.btn-sm 	This makes button size small.
+.btn-xs 	This makes button size with extra small.
+.btn-block 	This creates block level buttons—those that span the full width of a parent.
+
+
+--------------------
+Responsive Utilities
+
+Classes 	Devices
+.visible-xs 	Extra small (less than 768px) visible
+.visible-sm 	Small (up to 768 px) visible
+.visible-md 	Medium (768 px to 991 px) visible
+.visible-lg 	Larger (992 px and above) visible
+.hidden-xs 	Extra small (less than 768px) hidden
+.hidden-sm 	Small (up to 768 px) hidden
+.hidden-md 	Medium (768 px to 991 px) hidden
+.hidden-lg 	Larger (992 px and above) hidden
+
+
+
+-----
+Icons
+
+
+Glyphicons
+
+	Incluidos en Bootstrap
+	<span class="glyphicon glyphicon-search"></span>
+
+Font Awesome
+
+	https://fontawesome.com/
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	<i class="fa fa-search"></i>
+
+
+--------------------
+Imagenes Responsivas
+
+	img-fluid
+
+
+-----------------
+Elementos comunes
+
+	Dropdows
+
+	Button Groups
+
+	Input Groups
+
+	Navigation
+
+	Tabs
+
+	Navbar
+	
+	Pagination
+
+	Labels
+
+	Badgets
+
+	Jumbotron
+
+	Alerts
+
+	Progress Bar
+
+	Media Object
+
+	List Group
+
+	Panels
+
+	Modals
+
+	Popover
+
+	Carousel
+
+
+
+
+
+----------
+Ejercicio:
+
+Construir el CSS con Boostrap requerido para el archivo index.html.
+Probar todos los elementos que proporciona Bootstrap.
+
+
+
+-----------------------------------
+¿Que se verá en la siguiente clase?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################################
+3ra Clase JAVASCRIPT
+
+
+
+
+
+    <script>
+
+ 
+        // DOM 
+        // window
+
+
+        function mostraralerta(){
+            alert('hizo clic!');
+        }
+        function hacerclic(){
+            // document.getElementsByTagName('p')[0].onclick=mostraralerta;
+            // document.querySelector("#agrupar p:first-child").onclick=mostraralerta;
+
+            // var lista = document.querySelectorAll('#agrupar p');
+            // lista[0].onclick=mostraralerta;
+
+            var lista = document.getElementById('agrupar').querySelectorAll('p');
+
+            for(var i=0; i<lista.length; i++){
+                lista[i].onclick=mostraralerta;
+            }
+
+            //  las acciones de los usuarios son llamadas eventos. los hay en linea, embebidos y enlazados
+            /*
+            Manejadores de eventos - ON
+
+            EVENTOS DE RATÓN
+                onclick, onMouseOver, onmouseout
+            EVENTOS DE VENTANA
+                onload, onfocus
+            */
+
+
+        }
+        
+        // JAVASCRIPT es interpretado lo cual causa error si se hace referencia a un elemento el cual no esté aún cargado
+        //window.onload=hacerclic;
+
+
+
+        // addEventListener()
+
+        function hacerclic2(){
+            var elemento=document.getElementsByTagName('p')[0];
+            elemento.addEventListener('click', mostraralerta, false);
+        }
+        window.addEventListener('load', hacerclic2, false);
+
+
+    </script>
+
+
+    <script>
+        'use strict';
+        document.writeln('Hola Mundo!');
+
+        //	Definición	equivalente	en	un	Array 
+        var	days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+        //	days[0]	=	'Lunes' 
+        //	days[1]	=	'Martes' 
+        //	... 
+        //	days[6]	=	'Domingo'
+
+        var	n = 231.8273; 
+        n.toFixed(2);	//	231.82
+
+
+        var	hello = 'Hola '; 
+        var world = 'Mundo!';
+
+        // Para contar el número de caracteres 
+        console.log(hello.length); // 5
+
+        // Para concatenar cadenas 
+        console.log(hello + ' ' + world); // Hola Mundo! console.log(hello.concat(' ' + world)); // Hola Mundo!
+
+        // Para busacar subcadenas en una cadena 
+        var pos = hello.indexOf('a'); 
+        // pos = 3 
+        var pos = hello.indexOf('b'); 
+        // pos = -1
+
+        var	fruits = ['banana', 'melon', 'orange'];
+        // Para contar 
+        var n = fruits.length; // n = 3
+        //Para añadir elementos 
+        fruits.push('apple', 'peach'); 
+        // fruits = ['banana', 'melon, 'orange', 'apple', 'peach']
+
+        // split
+        var cadena = "juan,pedro,octavio,maria,lourdes";
+        var arrayCadena = cadena.split(',');
+        // arrayCadena = ['juan', 'pedro', 'octavio', 'maria', 'lourdes']
+
+        // join
+        arrayCadena = ['juan', 'pedro', 'octavio', 'maria', 'lourdes'];
+        var joinArray = arrayCadena.join(',');
+        // joinArray = "juan,pedro,octavio,maria,lourdes";
+
+
+
+        // OPERADORES
+        //	Incremento	(++)	y	decremento	(--) 
+        var	x = 1, 
+            y = 4; 
+        x++; 
+        // x = 2 
+        y--; 
+        // y = 3
+
+
+
+        // Abreviaciones 
+        var x = 5; 
+        x += 3; // x = x + 3 => 8 
+        x -= 1; // x = x - 1 => 4 
+        x *= 2; // x = x * 2 => 10 
+        x /= 5; // x = x / 5 => 1
+
+
+        // LOGICOS
+        var	visible	= true; 
+        !visible; 
+        //	Devuelve "false" y  	"true"
+
+        // AND ( && ) o OR ( || ) 
+
+
+
+
+        // Operadores	relacionales
+
+        // Mayor que: > 
+        // Menor que: < 
+        // Mayor o igual: >= 
+        // Menor o igual: <= 
+        // Igual que: == 
+        // Distinto de: !==
+
+        0 == ""
+        // true 
+        0 === ""
+        // false
+
+        0 == false
+        // true 
+        0 === false
+        // false
+
+        2 == '2'
+        // true 
+        2 === '2'
+        //	false
+
+
+
+        //	Objetos	(objects)
+        var obj	= {
+            name: 'Raul',
+            last_name: 'Jimenez Ortega',
+            age: 31 
+        };
+
+        // obj.name = 'Raul' 
+        // obj.last_name = 'Jimenez Ortega' 
+        // obj.age = 31
+
+        // obj['name'] = 'Raul' 
+        // obj['last_name'] = 'Jimenez Ortega' 
+        // obj['age'] = 31
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+####################################################
+CLASE 3 JQUERY
+
+Query es una librería de javasript (NO FRAMEWORK) que nos resume muchas líneas de código agilizando el desarrollo web con javascript. Este implementa muchas funcionalidades y buenas prácticas que solo con javascript se nos haría un poco tedioso de realizar.
+
+Hoy en día jQuery es usado en miles de sitios webs (por no decir en TODOS), y en la práctica de cada 10 programadores, 9 saben jQuery.
+
+
+jQuery es una biblioteca de JavaScript, creada inicialmente por John Resig, que permite simplificar la manera de interactuar con los documentos HTML, manipular el árbol DOM, manejar eventos, desarrollar animaciones y agregar interacción con la técnica AJAX a páginas web. Fue presentada el 14 de enero de 2006 en el BarCamp NYC. jQuery es software libre y de código abierto, posee un doble licenciamiento bajo la Licencia MIT y la Licencia Pública General de GNU v2, permitiendo su uso en proyectos libres y privativos.1 jQuery, al igual que otras bibliotecas, ofrece una serie de funcionalidades basadas en JavaScript que de otra manera requerirían de mucho más código, es decir, con las funciones propias de esta biblioteca se logran grandes resultados en menos tiempo y espacio.
+
+
+
+JQUERY BÁSICO
+http://anexsoft.com/tutoriales/jquery/
+
+
+SELECTORES JQUERY
+http://api.jquery.com/category/selectors/
+
+
+PLUGINS
+https://plugins.jquery.com/
+
+	BOOTSTRAP GALLERY
+	https://plugins.jquery.com/blueimp-bootstrap-image-gallery/
+
+
+BOOTSTRAP COMPONENTES
+getbootstrap.com
+
+
+
+
+
+
+
+
+
+
